@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Chandrashekhar Portfolio</title>
+
+  <!-- External Libraries -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://unpkg.com/aos@2.3.4/dist/aos.css">
+
+  <!-- Custom Styles -->
+  <style>
+    :root {
+      --bg-color: #0f0f0f;
+      --text-color: #f5f5f5;
+      --section-bg: #1a1a1a;
+    }
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background-color: var(--bg-color);
+      color: var(--text-color);
+      scroll-behavior: smooth;
+    }
+    nav {
+      background-color: #111;
+    }
+    nav a {
+      color: #ddd;
+      text-decoration: none;
+      margin: 0 15px;
+    }
+    .hero {
+      height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      background: url('https://images.unsplash.com/photo-1498050108023-c5249f4df085') no-repeat center center/cover;
+      text-align: center;
+    }
+    .hero-overlay {
+      background-color: rgba(0, 0, 0, 0.6);
+      padding: 50px;
+    }
+    .typewriter h1 {
+      overflow: hidden;
+      border-right: .15em solid #00f7ff;
+      white-space: nowrap;
+      margin: 0 auto;
+      letter-spacing: .15em;
+      color: #fff;
+      animation:
+        typing 3s steps(40, end),
+        blink-caret .75s step-end infinite;
+    }
+    @keyframes typing {
+      from { width: 0 }
+      to { width: 100% }
+    }
+    @keyframes blink-caret {
+      from, to { border-color: transparent }
+      50% { border-color: #00f7ff; }
+    }
+    section {
+      padding: 80px 20px;
+    }
+    .section-title {
+      font-size: 2rem;
+      border-left: 5px solid #00f7ff;
+      padding-left: 10px;
+      margin-bottom: 40px;
+    }
+    .card {
+      background-color: var(--section-bg);
+      border: none;
+      color: var(--text-color);
+    }
+    .project-img {
+      width: 100%;
+      border-radius: 10px;
+      margin-bottom: 15px;
+    }
+    footer {
+      background: #111;
+      text-align: center;
+      padding: 20px;
+    }
+    .nav-link:hover {
+      color: #00f7ff !important;
+    }
+    #backToTop {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      background-color: #00f7ff;
+      color: #000;
+      border: none;
+      padding: 10px 15px;
+      border-radius: 50%;
+      cursor: pointer;
+      display: none;
+      z-index: 1000;
+    }
+    .toggle-mode {
+      position: fixed;
+      top: 20px;
+      right: 20px;
+      z-index: 1000;
+      background: #00f7ff;
+      color: #000;
+      padding: 6px 12px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+  <!-- Dark/Light Mode Toggle -->
+  <button class="toggle-mode" onclick="toggleMode()">Toggle Mode</button>
+
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg navbar-dark sticky-top">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#">Chandrashekhar</a>
+      <div class="collapse navbar-collapse">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link" href="#education">Education</a></li>
+          <li class="nav-item"><a class="nav-link" href="#skills">Skills</a></li>
+          <li class="nav-item"><a class="nav-link" href="#experience">Experience</a></li>
+          <li class="nav-item"><a class="nav-link" href="#projects">Projects</a></li>
+          <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero Section with Typewriter -->
+  <div class="hero">
+    <div class="hero-overlay">
+      <div class="typewriter">
+        <h1>Welcome to Chandrashekhar's Portfolio</h1>
+      </div>
+    </div>
+  </div>
+
+  <!-- Sections -->
+  <section id="education" data-aos="fade-up">
+    <h2 class="section-title">Education</h2>
+    <img src="https://images.unsplash.com/photo-1571260899304-425eee4c7efc" class="project-img" alt="Education">
+    <p>B.E. EEE, KLE Technological University, GPA: 8.78</p>
+  </section>
+
+  <section id="skills" data-aos="fade-right">
+    <h2 class="section-title">Skills</h2>
+    <img src="https://images.unsplash.com/photo-1581091870622-1c68d5351fdb" class="project-img" alt="Skills">
+    <p>Embedded C, System Verilog, ESP32, MATLAB, IoT, etc.</p>
+  </section>
+
+  <section id="experience" data-aos="fade-left">
+    <h2 class="section-title">Experience</h2>
+    <img src="https://images.unsplash.com/photo-1581092334514-03f1cbd7bb2d" class="project-img" alt="Experience">
+    <p>Internships at Autoretro Tec & SEMI-KSHA – Embedded Systems & Verification</p>
+  </section>
+
+  <section id="projects" data-aos="zoom-in">
+    <h2 class="section-title">Projects</h2>
+    <div class="row">
+      <div class="col-md-4" data-aos="flip-left">
+        <div class="card p-3">
+          <img src="https://images.unsplash.com/photo-1602526210043-17e0f2f1e04d" class="project-img" alt="Battery Project">
+          <h5>EV Battery Balancing</h5>
+          <p>Algorithms for SoC balance using MATLAB.</p>
+        </div>
+      </div>
+      <div class="col-md-4" data-aos="flip-left" data-aos-delay="200">
+        <div class="card p-3">
+          <img src="https://images.unsplash.com/photo-1518770660439-4636190af475" class="project-img" alt="OFDM">
+          <h5>NB-IoT OFDM Receiver</h5>
+          <p>Low-power design with SNR optimization.</p>
+        </div>
+      </div>
+      <div class="col-md-4" data-aos="flip-left" data-aos-delay="400">
+        <div class="card p-3">
+          <img src="https://images.unsplash.com/photo-1521791136064-7986c2920216" class="project-img" alt="Alert System">
+          <h5>Safety Alert System</h5>
+          <p>Real-time GPS & gas alerts with Raspberry Pi.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact" data-aos="fade-up">
+    <h2 class="section-title">Contact</h2>
+    <img src="https://images.unsplash.com/photo-1521791136064-7986c2920216" class="project-img" alt="Contact">
+    <p>Email: chandrashekharangadi07@gmail.com</p>
+    <p>Phone: +91 82774 29308</p>
+  </section>
+
+  <!-- Back to Top Button -->
+  <button id="backToTop" onclick="window.scrollTo({ top: 0, behavior: 'smooth' })">
+    <i class="fas fa-arrow-up"></i>
+  </button>
+
+  <!-- Footer -->
+  <footer>
+    <p>&copy; 2025 Chandrashekhar Angadi | All rights reserved.</p>
+  </footer>
+
+  <!-- JS Scripts -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+  <script>
+    AOS.init();
+
+    // Show Back to Top button
+    window.onscroll = () => {
+      const topBtn = document.getElementById("backToTop");
+      topBtn.style.display = window.scrollY > 300 ? "block" : "none";
+    };
+
+    // Toggle Dark/Light Mode
+    function toggleMode() {
+      const root = document.documentElement;
+      const dark = getComputedStyle(root).getPropertyValue('--bg-color') === '#0f0f0f';
+      root.style.setProperty('--bg-color', dark ? '#ffffff' : '#0f0f0f');
+      root.style.setProperty('--text-color', dark ? '#000000' : '#f5f5f5');
+      root.style.setProperty('--section-bg', dark ? '#f0f0f0' : '#1a1a1a');
+    }
+  </script>
+</body>
+</html>
